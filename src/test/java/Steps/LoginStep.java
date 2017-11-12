@@ -27,7 +27,7 @@ public class LoginStep {
         System.out.println("I click login button");
     }
 
-    @Then("^I should the userform page$")
+    @Then("^I should see the userform page$")
     public void iShouldTheUserformPage() throws Throwable {
         System.out.println("I see userform page");
     }
