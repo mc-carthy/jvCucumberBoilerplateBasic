@@ -20,7 +20,7 @@ Feature: Login Feature
     Given I navigate to the login page
     When I enter the following credentials for login
       | username | password        |
-      | "admin"  | "adminPassword" |
+      | admin  | adminPassword |
     And I click the login button
     Then I should see the userform page
 
