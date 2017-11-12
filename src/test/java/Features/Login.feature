@@ -34,3 +34,11 @@ Feature: Login Feature
     Examples:
       | Username | Password        |
       | "admin"  | "adminPassword" |
+
+  # Augument transformation example
+  Scenario: Login with valid credentials
+    Given I navigate to the login page
+    When I enter the username as admin and password as admin
+    And I enter the email as Email:admin
+    And I click the login button
+    Then I should see the userform page
