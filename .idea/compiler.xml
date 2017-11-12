@@ -9,8 +9,8 @@
         <module name="cucumberJavaBoilerplateOsx" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="cucumberJavaBoilerplateOsx" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="cucumberJavaBoilerplateOsx" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

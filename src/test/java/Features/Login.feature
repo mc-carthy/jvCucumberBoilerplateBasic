@@ -42,3 +42,11 @@ Feature: Login Feature
     And I enter the email as Email:admin
     And I click the login button
     Then I should see the userform page
+
+  # Lambda expressions
+  Scenario: Login with valid credentials
+    Given I navigate to the login page
+    When I enter the username as admin and password as admin
+    And I want to test out lambda expressions
+    And I click the login button
+    Then I should see the userform page
