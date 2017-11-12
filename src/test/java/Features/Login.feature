@@ -1,6 +1,13 @@
 Feature: Login Feature
   This feature deals with the login functionality of the application
 
+  # Failing test
+  Scenario: Login with valid credentials
+    Given I navigate to the login page
+    When I enter the username as admin and password as admin
+    And I click the login button
+    Then I the test should fail
+
   # Hard-coded admin credentials
   Scenario: Login with valid credentials
     Given I navigate to the login page

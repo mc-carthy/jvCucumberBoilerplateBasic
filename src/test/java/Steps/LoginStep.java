@@ -70,6 +70,11 @@ public class LoginStep extends BaseUtil{
         System.out.println("The Email address is " + email);
     }
 
+    @Then("^I the test should fail$")
+    public void iTheTestShouldFail() throws Throwable {
+        Assert.assertTrue(false);
+    }
+
     public class User {
         public String username;
         public String password;
