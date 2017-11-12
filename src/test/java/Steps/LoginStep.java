@@ -1,6 +1,7 @@
 package Steps;
 
 import Base.BaseUtil;
+import Pages.LoginPage;
 import Transformation.EmailTransform;
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
@@ -11,6 +12,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import sun.rmi.runtime.Log;
 
 import java.awt.datatransfer.StringSelection;
 import java.util.ArrayList;
@@ -32,13 +34,14 @@ public class LoginStep extends BaseUtil{
 
     @When("^I enter the username as admin and password as admin$")
     public void iEnterTheUsernameAsAdminAndPasswordAsAdmin() throws Throwable {
-        base.driver.findElement(By.name("UserName")).sendKeys("admin");
-        base.driver.findElement(By.name("Password")).sendKeys("adminpassword");
+        LoginPage page = new LoginPage(base.driver);
+        page.EnterCredentials("admin", "adminPassword");
     }
 
     @And("^I click the login button$")
     public void iClickTheLoginButton() throws Throwable {
-        base.driver.findElement(By.name("Login")).submit();
+        LoginPage page = new LoginPage(base.driver);
+        page.ClickLogin();
     }
 
     @Then("^I should see the userform page$")
