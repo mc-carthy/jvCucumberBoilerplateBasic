@@ -9,6 +9,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 
 import java.awt.datatransfer.StringSelection;
 import java.util.ArrayList;
@@ -30,17 +32,18 @@ public class LoginStep extends BaseUtil{
 
     @When("^I enter the username as admin and password as admin$")
     public void iEnterTheUsernameAsAdminAndPasswordAsAdmin() throws Throwable {
-        System.out.println("I enter credentials");
+        base.driver.findElement(By.name("UserName")).sendKeys("admin");
+        base.driver.findElement(By.name("Password")).sendKeys("adminpassword");
     }
 
     @And("^I click the login button$")
     public void iClickTheLoginButton() throws Throwable {
-        System.out.println("I click login button");
+        base.driver.findElement(By.name("Login")).submit();
     }
 
     @Then("^I should see the userform page$")
     public void iShouldTheUserformPage() throws Throwable {
-        System.out.println("I see userform page");
+        Assert.assertTrue(base.driver.findElement(By.id("Initial")).isDisplayed());
     }
 
     @When("^I enter the username as \"([^\"]*)\" and password as \"([^\"]*)\"$")
