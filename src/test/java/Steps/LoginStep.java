@@ -29,7 +29,6 @@ public class LoginStep extends BaseUtil{
     @Given("^I navigate to the login page$")
     public void iNavigateToTheLoginPage() throws Throwable {
         base.driver.navigate().to("http://executeautomation.com/demosite/Login.html");
-        System.out.println("I navigate to login page");
     }
 
     @When("^I enter the username as admin and password as admin$")
