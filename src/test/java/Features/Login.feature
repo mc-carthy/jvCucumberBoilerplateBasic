@@ -3,6 +3,8 @@ Feature: Login Feature
 
   Scenario: Login with valid credentials
     Given I navigate to the login page
-    When I enter the username as "admin" and password as "adminpassword"
+    When I enter the following credentials for login
+      | username | password        |
+      | "admin"  | "adminPassword" |
     And I click the login button
     Then I should the userform page
