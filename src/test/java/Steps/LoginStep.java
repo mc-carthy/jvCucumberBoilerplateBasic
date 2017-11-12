@@ -24,6 +24,7 @@ public class LoginStep extends BaseUtil{
 
     @Given("^I navigate to the login page$")
     public void iNavigateToTheLoginPage() throws Throwable {
+        base.driver.navigate().to("http://executeautomation.com/demosite/Login.html");
         System.out.println("I navigate to login page");
     }
 
@@ -39,7 +40,6 @@ public class LoginStep extends BaseUtil{
 
     @Then("^I should see the userform page$")
     public void iShouldTheUserformPage() throws Throwable {
-        System.out.println("The driver is: " + base.StepInfo);
         System.out.println("I see userform page");
     }
 
